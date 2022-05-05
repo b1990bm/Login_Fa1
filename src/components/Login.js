@@ -23,7 +23,7 @@ const Login = () => {
     return (
         <div>
             <form className="form" onSubmit={sumbitHandeler}>
-            <h1 className="headerName">ثبت نام</h1>
+            <h1 className="headerName">ورود کاربر</h1>
             <div className="form-group">
                 <label>ایمیل</label>
                 <input type="email" className="form-control" 
