@@ -1,0 +1,98 @@
+@mixin button{
+    height: 3rem;
+    width: 6rem;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 1rem;
+    border: none;
+    overflow: hidden;
+    background-color: #00a8ff;
+    color: #fff;
+    margin: 20px;
+    transition: all 0.5s ease-in-out;
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        &:hover{
+         background-color: #8c7ae6;
+         cursor: pointer;
+         
+         
+     }
+
+ }
+ @mixin bodyForm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+        background-color: #dcdde1;
+        height: fit-content;
+        width: 400px;
+        transform: translateX(-600px);
+        border-radius: 1rem;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
+        
+        
+ }
+      
+
+ @mixin headerName {
+     margin-top: 20px;
+     color: #0097e6; 
+    
+ }
+
+ @mixin Form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+       input{
+           border: none;
+           border-radius: 10px;
+           padding: 10px;
+           width: 300px;
+           font-weight: 600;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;      
+           &:focus{
+              color: #0097e6;
+              outline-color: #0097e6;
+           }
+        
+        }
+       label{
+           margin-top: 20px;
+           font-size: 20px;
+           margin-bottom: 3px;
+
+       }
+     
+ }
+ a{
+    color: #e84118;
+     text-decoration: none;
+     margin-bottom: 25px;
+     transition: all 0.5s;
+     &:hover{
+         color: #c23616;
+         font-weight: bold;
+     }
+ }
+ 
+
+ .headerName{
+     @include headerName;
+ }
+
+ .form{
+     @include bodyForm;
+ }
+
+ .form-group{
+    @include Form-group();
+ }
+ 
+ 
+.register{
+    @include button;
+}

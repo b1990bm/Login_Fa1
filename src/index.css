@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color:#f5f6fa;
+  font-family: B-yekan;
+}
+@font-face {
+  font-family: 'B-yekan';
+  src: local('B-yekan'), url(./Font/BYekan+.ttf) format('truetype');
+}
