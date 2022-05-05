@@ -12,9 +12,16 @@ const Register = () => {
     const sumbitHandeler=(e)=>{
         e.preventDefault();
 
+        if (name && email && password){
             localStorage.setItem("name",JSON.stringify(name));
             localStorage.setItem("email",JSON.stringify(email));
             localStorage.setItem("password",JSON.stringify(password));
+
+          
+        }
+
+
+            
 
 
 
