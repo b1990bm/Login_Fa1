@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 const Login = () => {
     return (
         <div>
@@ -16,7 +16,7 @@ const Login = () => {
                                     placeholder="پسورد خود را وارد کنید" />
             </div>
             <button type="submit" className="register">وارد شوید</button>
-            <a href="#">...لطفا ثبت نام کنید</a>
+            <Link to="/register">لطفا ثبت نام کنید</Link>
             </form>
         </div>
     );

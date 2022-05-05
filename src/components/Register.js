@@ -1,5 +1,6 @@
 import React from 'react';
 import "../Styles/style.scss";
+import {Link} from 'react-router-dom';
 const Register = () => {
     return (
         <div>
@@ -26,7 +27,7 @@ const Register = () => {
                                     placeholder="شماره تماس خود را وارد کنید" />
             </div>
             <button type="submit" className="register">ثبت نام</button>
-            <a href="#">اگر ثبت نام کردید وارد شوید ؟</a>
+            <Link to="/login">اگر ثبت نام کردید وارد شوید ؟</Link>
             </form>
         </div>
     );
