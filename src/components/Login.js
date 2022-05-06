@@ -12,7 +12,7 @@ const Login = () => {
 
         if(emaillog===mail && passwordlog===pass){
           
-            window.location.replace("/register")
+            window.location.replace("/Products")
 
         }else{
            
