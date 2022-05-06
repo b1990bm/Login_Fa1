@@ -4,11 +4,11 @@ import Logo from "../image/logo.svg";
 import Search from "../image/search.svg";
 import login from "../image/login.svg";
 import close from "../image/close.svg";
+import "../Styles/style.scss";
 const Navbar = () => {
     const [search,setSearch]=useState(false);
     return (
         <div className="navContainer">
-
             <div className="rightBar">
                 <img src={Logo} alt="Logo" />
                 <div className="menuBar">

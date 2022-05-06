@@ -1,0 +1,43 @@
+.banner{
+    background-color: #353b48;
+    width: 1290px;
+    height: 500px;
+    border-radius: 10px;
+    transform: translateX(-163px);
+}
+.titelBody{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 350px;
+        height: 350px;
+        transform: translate(100px,150px);
+        
+    }
+    a{
+        color: #fff;
+        background-color:#0097e6 ;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 200px 50px #fff;
+        transform: translate(590px,120px);
+       
+
+       
+    }
+}
+.titelBanner{
+    margin-right: 100px;
+    h1{
+        color: #fff;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    h3{
+        color:#7f8fa6;
+
+    }
+    
+}
