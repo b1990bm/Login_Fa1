@@ -4,14 +4,19 @@ import "../Styles/homeStyle.scss";
 import storeOnline from "../image/online-shop-svgrepo-com.svg";
 import Card from "./Card";
 import axios from "axios";
+
 const Home = () => {
-    const [date,setDate]=useState({});
+const [date,setDate]=useState({});
+
+const random=Math.floor(Math.random()*7); 
+ useEffect(()=>{
     
-   
-        // const random=setTimeout(Math.floor(Math.random()*7), 5000);
-        // const api=`https://fakestoreapi.com/products/${random}`
-        // axios.get(api)
-        // .then(response=>setDate(response.data))
+    const api=`https://fakestoreapi.com/products/${random}`
+    axios.get(api)
+    .then(response=>setDate(response.data))
+ },[])  
+
+
     
     console.log(date)
     return (
@@ -27,7 +32,7 @@ const Home = () => {
                </div>
            </div>
            <div className="cardBody" >
-               <Card />
+               <Card image={date.image} id={date.id} body={date.category} title={date.title} price={date.price}/>
                
                
            </div>

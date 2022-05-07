@@ -1,17 +1,21 @@
 import React from 'react';
-import pic from "../image/download.jpg";
 import "../Styles/homeStyle.scss";
 import "../Styles/cardStyle.scss";
-const Card = () => {
+import { Link,useParams } from 'react-router-dom';
+const Card = (props) => {
     
+    
+  
+   
+   
     return (
         <div>
             <div className="cardStyle">
-                <span>$120</span>
-                <img src={pic} alt="image1" />
-                <h2>title</h2>
-                <p>tttttttttttttttttttttttt</p>
-                <button>همین الان بخرش</button>
+                <span>$ {props.price}</span>
+                <img src={props.image} alt="img" />
+                <h2>{props.category}</h2>
+                <p>{props.title}</p>
+                <Link to={`/product/${props.id}`} >همین الان بخرش</Link>
             </div>
         </div>
     );

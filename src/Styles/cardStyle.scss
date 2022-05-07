@@ -43,7 +43,12 @@ $easing: cubic-bezier(0.4, 0, 0.2, 1);
             border-radius: 50%;
             @extend %caps;
         }
-        button{
+        img{
+          margin-right: 30px;
+          width: 150px;
+          height: 200px;
+      }
+        a{
             position: absolute;
             width: 120px;
             height: 50px;

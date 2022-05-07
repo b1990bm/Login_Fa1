@@ -5,6 +5,7 @@ import {Route,Routes} from 'react-router-dom';
 import Home from "./components/Home";
 import Navbar from './components/Navbar';
 import Products from "./components/Products";
+import ProductD from "./components/ProductD";
 const App = () => {
   return (
     <div>
@@ -12,7 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/product/:id" element={<ProductD />} />
+        <Route path="/product" element={<Products />} />
         <Route path="/" element={<Home />} />
       </Routes>
     </div>
