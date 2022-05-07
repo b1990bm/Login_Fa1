@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import {Link} from "react-router-dom";
 import "../Styles/homeStyle.scss";
 import storeOnline from "../image/online-shop-svgrepo-com.svg";
 import Card from "./Card";
+import axios from "axios";
 const Home = () => {
+    const [date,setDate]=useState({});
+    
+   
+        // const random=setTimeout(Math.floor(Math.random()*7), 5000);
+        // const api=`https://fakestoreapi.com/products/${random}`
+        // axios.get(api)
+        // .then(response=>setDate(response.data))
+    
+    console.log(date)
     return (
         <div>
            <div className="banner">
@@ -18,6 +28,8 @@ const Home = () => {
            </div>
            <div className="cardBody" >
                <Card />
+               
+               
            </div>
         </div>
     );

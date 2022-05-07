@@ -1,0 +1,66 @@
+$background: #F0F0F0;
+$white: #fff;
+$black: #000;
+$grey: #666;
+$accent: #cf092c;
+$font-bold: 700;
+$time: 0.3s;
+$easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+%caps {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-weight: $font-bold;
+  }
+
+@mixin shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  @mixin shadow-dark {
+    box-shadow: 0 36px 28px -20px rgba($black, 0.20);
+  }
+
+.cardStyle{
+    position: relative;
+    width: 300px;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: $white;
+    transition:box-shadow $time $easing;
+    @include shadow;
+        span{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba($black, 0.95);
+            color: $white;
+            border-radius: 50%;
+            @extend %caps;
+        }
+        button{
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            border-radius: 8px;
+            bottom: -30px;
+            right: 30px;
+            color: #fff;
+            border: none;
+            @extend %caps;
+            background-color: rgba($accent, 0.95);
+            transition: background-color $time $easing, box-shadow $time $easing;
+            @include shadow;  
+                &:hover {
+                    cursor: pointer;
+                    @include shadow-dark;
+                    background-color: mix($accent, $black, 95%);
+                }
+        }    
+    }
+
