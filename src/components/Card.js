@@ -1,9 +1,13 @@
 import React from 'react';
 import "../Styles/homeStyle.scss";
 import "../Styles/cardStyle.scss";
-import { Link,useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Card = (props) => {
-    
+    const shortn=(titel)=>{
+        const get=titel.split(" ")
+        const newTitle=`${get[0]} ${get[1]} ${get[2]}`
+        return newTitle;
+    }
     
   
    
@@ -11,10 +15,10 @@ const Card = (props) => {
     return (
         <div>
             <div className="cardStyle">
-                <span>$ {props.price}</span>
+                <span>${props.price}</span>
                 <img src={props.image} alt="img" />
-                <h2>{props.category}</h2>
-                <p>{props.title}</p>
+                <h2>{shortn(props.title)}</h2>
+                <p>{props.category}</p>
                 <Link to={`/product/${props.id}`} >همین الان بخرش</Link>
             </div>
         </div>

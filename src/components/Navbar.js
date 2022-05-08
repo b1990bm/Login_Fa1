@@ -12,7 +12,8 @@ const Navbar = () => {
             <div className="rightBar">
                 <img src={Logo} alt="Logo" />
                 <div className="menuBar">
-                    <Link className="linkmenu" to="" > محصولات</Link>
+                    <Link className="linkmenu" to="/" > خانه</Link>
+                    <Link className="linkmenu" to="/products" > محصولات</Link>
                     <Link className="linkmenu" to="" > وبلاگ</Link>
                     <Link className="linkmenu" to="" > تماس با ما</Link>
                 </div>
