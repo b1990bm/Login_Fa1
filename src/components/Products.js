@@ -8,7 +8,15 @@ const Products = () => {
     
     return (
         <div className="productStyle">
-            {productsDate.map(dateCard=><Card key={dateCard.id} image={dateCard.image} title={dateCard.title} price={dateCard.price}  category={dateCard.category} id={dateCard.id} />)}
+            {
+                productsDate.isloading ?
+                <>
+                <h1 className="loading">منتظر بمانید...</h1>
+                <span className="ring"></span>
+                </>
+                    :
+                    productsDate.date.map(dateCard=><Card key={dateCard.id} image={dateCard.image} title={dateCard.title} price={dateCard.price}  category={dateCard.category} id={dateCard.id} />)
+            }
         </div>
     );
 };
