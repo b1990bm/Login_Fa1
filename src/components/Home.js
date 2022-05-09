@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "../Styles/homeStyle.scss";
 import storeOnline from "../image/online-shop-svgrepo-com.svg";
-import Card from "./Card";
+
 
 
 const Home = () => {
